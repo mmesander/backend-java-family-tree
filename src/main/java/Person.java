@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Person {
@@ -34,9 +35,23 @@ public class Person {
     // Methods
     public void addParents(){}
     public void addChild(){}
-    public void addPet(Person person, Pet pet){}
-    public void addSibling(){}
 
+    public void addPet(Person person, Pet pet){
+        List<Pet> pets = new ArrayList<>();
+        if (person.getPets() != null) {
+            pets.addAll(person.getPets());
+        }
+        pets.add(pet);
+        person.setPets(pets);
+        // checken of er al een lijst is
+        // indien die er is, moet de pet toegevoegd worden en alles behouden
+        // indien die er niet is, dan oet hij aangemakat worden
+    }
+
+    public void addSibling(){}
+    // Eerst checken of er al broers of zussen zijn
+    // Indien die er zijn moet iets toegevoegd worden aan de lijst
+    // Indien die er niet zijn moet een lijst toegevoegd worden
 
     // Getters and Setters
     public String getName() {
