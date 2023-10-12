@@ -22,6 +22,14 @@ public class Person {
         this.sex = sex;
     }
 
+    public Person(String name, String middleName, String lastName, int age, char sex) {
+        this.name = name;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.age = age;
+        this.sex = sex;
+    }
+
 
 
 }
