@@ -9,9 +9,9 @@ public class Person {
     private int age;
     private Person mother;
     private Person father;
-    private List siblings;
-    private List children;
-    private List pets;
+    private List<Person> siblings;
+    private List<Person> children;
+    private List<Pet> pets;
 
 
     // Constructors
@@ -31,5 +31,6 @@ public class Person {
     }
 
 
+    // Methods
 
 }
