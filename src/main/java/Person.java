@@ -33,14 +33,19 @@ public class Person {
 
 
     // Methods
-    public void addParents(){}
-    public void addChild(Person person, Person child){
+    public void addParents(Person child, Person father, Person mother){
+        child.setFather(father);
+        child.setMother(mother);
+        father.addChild(father, child);
+        mother.addChild(mother, child);
+    }
+    public void addChild(Person parent, Person child){
         List<Person> children = new ArrayList<>();
-        if (person.getChildren() != null) {
-            children.addAll(person.getChildren());
+        if (parent.getChildren() != null) {
+            children.addAll(parent.getChildren());
         }
         children.add(child);
-        person.setChildren(children);
+        parent.setChildren(children);
     }
 
     public void addPet(Person person, Pet pet){
