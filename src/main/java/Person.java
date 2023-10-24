@@ -34,7 +34,14 @@ public class Person {
 
     // Methods
     public void addParents(){}
-    public void addChild(){}
+    public void addChild(Person person, Person child){
+        List<Person> children = new ArrayList<>();
+        if (person.getChildren() != null) {
+            children.addAll(person.getChildren());
+        }
+        children.add(child);
+        person.setChildren(children);
+    }
 
     public void addPet(Person person, Pet pet){
         List<Pet> pets = new ArrayList<>();
