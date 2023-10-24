@@ -9,5 +9,8 @@
         <module name="FamilyTree" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="backend-java-family-tree" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
