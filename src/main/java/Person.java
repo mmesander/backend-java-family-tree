@@ -43,15 +43,17 @@ public class Person {
         }
         pets.add(pet);
         person.setPets(pets);
-        // checken of er al een lijst is
-        // indien die er is, moet de pet toegevoegd worden en alles behouden
-        // indien die er niet is, dan oet hij aangemakat worden
     }
 
-    public void addSibling(){}
-    // Eerst checken of er al broers of zussen zijn
-    // Indien die er zijn moet iets toegevoegd worden aan de lijst
-    // Indien die er niet zijn moet een lijst toegevoegd worden
+    public void addSibling(Person person, Person sibling){
+        List<Person> siblings = new ArrayList<>();
+        if (person.getSiblings() != null) {
+            siblings.addAll(person.getSiblings());
+        }
+        siblings.add(sibling);
+        person.setSiblings(siblings);
+    }
+
 
     // Getters and Setters
     public String getName() {
