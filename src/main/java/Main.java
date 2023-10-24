@@ -9,11 +9,13 @@ public class Main {
         Person sonja = new Person("Sonja", "Geelhoed", 60, 'V');
         Person james = new Person("James", "Mesander", 4, 'M');
         Person owen = new Person("Owen", "Mesander", 1, 'M');
+        Pet wollie = new Pet("Wollie", 2, "Konijn");
 
 
         mark.addParents(mark, frank, sonja);
         mark.addSibling(mark, paul);
         mark.addSibling(mark, lisa);
+        mark.addPet(mark, wollie);
 
         paul.addParents(paul, frank, sonja);
         paul.addSibling(paul, mark);
